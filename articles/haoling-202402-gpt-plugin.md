@@ -1,6 +1,6 @@
 ---
 title: "FastAPIを使って、ChatGPTのプラグインを開発する"
-emoji: "📼"
+emoji: "🤖"
 type: "tech"
 topics: ["ChatGPT"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: false # 公開設定（falseにすると下書き）
