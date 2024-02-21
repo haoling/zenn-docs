@@ -3,7 +3,7 @@ title: "FastAPIを使って、ChatGPTのプラグインを開発する"
 emoji: "🤖"
 type: "tech"
 topics: ["ChatGPT"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 # 概要
 ChatGPTは、出回っている多数のプラグインを活用することができます。
