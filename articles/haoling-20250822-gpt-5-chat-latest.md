@@ -4,6 +4,7 @@ emoji: "🤖"
 type: "tech"
 topics: ["ChatGPT"] # タグ。["markdown", "rust", "aws"]のように指定する
 published: true # 公開設定（falseにすると下書き）
+publication_name: "gmomedia"
 ---
 はいどーも、はおりんです！
 
