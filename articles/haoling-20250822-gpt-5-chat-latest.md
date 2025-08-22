@@ -3,7 +3,7 @@ title: "gpt-5シリーズのモデルの違い（gpt-5-chat-latestの紹介）"
 emoji: "🤖"
 type: "tech"
 topics: ["ChatGPT"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 ---
 はいどーも、はおりんです！
 
