@@ -78,7 +78,7 @@ Zipファイルが生成されます。そうです、Zipファイルなんで�
 
 今回はこんなディレクトリ構造をしたスキルをzipで固めて投入してみました
 
-![image.png](/images/claude-skill-creator/2-example-chack-target-files.png)
+![image.png](/images/claude-skill-creator/2-example-check-target-files.png)
 
 結果のスクリーンショットの一部がこちらです
 
