@@ -3,7 +3,7 @@ title: "ClaudeのSkillsの安全性を確認するSkillを作った話"
 emoji: "🤖"
 type: "tech"
 topics: ["Claude"] # タグ。["markdown", "rust", "aws"]のように指定する
-published: false # 公開設定（falseにすると下書き）
+published: true # 公開設定（falseにすると下書き）
 publication_name: "gmomedia"
 ---
 # Claude Skillsの衝撃
