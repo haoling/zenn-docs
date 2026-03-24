@@ -52,7 +52,7 @@ publication_name: "gmomedia"
 
 作ったものをざっくり図にするとこんな感じです。
 
-![image.png](/images/haoling-20260324-mcpproxy-gateway/Gemini_Generated_Image_gz7nzegz7nzegz7n.png)
+![image.png](/images/haoling-20260324-mcpproxy-gateway/Gemini_Generated_Image_gz7nzegz7nzegz7n.jpg)
 
 認証は Dex（OIDC IdP）が担います。OneLogin を Dex の上流コネクタとして使い、社員アカウントで OAuth 認可コードフローをして JWT を取得。JWT を Bearer ヘッダーに載せて MCP プロキシを叩く構成です。
 
@@ -133,7 +133,7 @@ DCR は「自動化できる」一方で「何が登録されているかわか�
 
 現実解として、Dex の `staticClients` にクライアントを手で書く運用にしています。`staticClients` に書いたシークレットは K8s Secret に格納して、閲覧は社内認証ページ経由に限定。手動管理ではありますが、「何が登録されているか一覧で把握できる」という点では DCR より安心感があります。
 
-![image.png](/images/haoling-20260324-mcpproxy-gateway/Gemini_Generated_Image_6zrxl36zrxl36zrx.png)
+![image.png](/images/haoling-20260324-mcpproxy-gateway/Gemini_Generated_Image_6zrxl36zrxl36zrx.jpg)
 
 ## ⑤ MCP プロキシと Dex の署名鍵ローテーション問題
 
