@@ -108,6 +108,10 @@ Before: 各 PC に stdio サーバー（Windows は詰む）
 After:  K8s 上の stdio サーバー → MCP プロキシ → HTTPS でどこからでもアクセス
 ```
 
+:::message
+ポイント：OS の壁を超えるために、stdio → HTTP 変換をサーバー側で引き受ける
+:::
+
 ## ③ API トークンをクライアントに保存したくない
 
 「ローカル PC に K8s の API トークンを置く」方式との比較で考えると、OAuth を使う意味がよくわかります。
@@ -123,6 +127,10 @@ Client Secret が仮に漏れても、OneLogin の社内アカウントでログ
 
 接続手順を書いた README ページには Client Secret も掲載していますが、その README 自体が OneLogin で保護されているので、見られる人は社員だけという設計にしています。
 
+:::message
+ポイント：「シークレットを知っている」と「アクセスできる」を OAuth で切り離す
+:::
+
 ## ④ Dynamic Client Registration の壁
 
 MCP の認証仕様では、**RFC 7591（Dynamic Client Registration）** に対応したサーバーを想定しています。DCR があると、クライアントが IdP に自分自身を自動登録できるので、クライアントを追加するたびに手動で設定する必要がなくなります。
@@ -134,6 +142,10 @@ MCP の認証仕様では、**RFC 7591（Dynamic Client Registration）** に対
 DCR は「自動化できる」一方で「何が登録されているかわからなくなる」というトレードオフがあり、弊社の運用には合わないと判断しました。
 
 現実解として、Dex の `staticClients` にクライアントを手で書く運用にしています。`staticClients` に書いたシークレットは K8s Secret に格納して、閲覧は社内認証ページ経由に限定。手動管理ではありますが、「何が登録されているか一覧で把握できる」という点では DCR より安心感があります。
+
+:::message
+ポイント：自動化の利便性より「把握できる」安心感を優先して手動管理を選んだ
+:::
 
 ![image.png](/images/haoling-20260324-mcpproxy-gateway/Gemini_Generated_Image_6zrxl36zrxl36zrx.jpg)
 
@@ -153,6 +165,10 @@ MCP プロキシは **起動時に Dex の JWKS（公開鍵）を読み込んで
 
 自作というほど複雑なものでもなく、alpine コンテナで kubectl のシェルスクリプトを回しているだけですが、これがないと鍵ローテーションのたびに手動再起動が必要になります。
 
+:::message
+ポイント：外部依存の鍵ローテーションは、専用のカスタムコントローラーで吸収する
+:::
+
 ## ⑥ MCPO が起動直後に空の OpenAPI を返す
 
 GPTs から MCP ツールを使うには、OpenAPI 形式のスキーマが必要です。これを生成してくれるのが MCPO（MCP to OpenAPI）というコンポーネントです。
@@ -170,6 +186,10 @@ MCPO は起動直後、MCP サーバーへの接続が確立される前に `pat
 ついでに、MCPO が生成する openapi.json の `servers[0].url` はデフォルトで `http://127.0.0.1:8001` になります。外部クライアントに正しい URL を返すため、OpenResty（Lua）でレスポンスの JSON をパースして servers.url を動的に差し替えています。
 
 地味ですが、これをやらないと GPTs が正しい URL でアクセスできないので必須の対応でした。
+
+:::message
+ポイント：起動タイミングのズレはリローダーで自動検知・自動復旧させる
+:::
 
 ---
 
