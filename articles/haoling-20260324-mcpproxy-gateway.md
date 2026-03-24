@@ -3,7 +3,7 @@ title: "AI エージェントに社内 Kubernetes を安全に見せる MCP 基�
 emoji: "☸️"
 type: "tech"
 topics: ["MCP", "Kubernetes", "OAuth", "Dex"]
-published: false
+published: true
 publication_name: "gmomedia"
 ---
 
