@@ -3,7 +3,7 @@ title: "IKEAの激安Threadボタンを買ったら、IPv6の沼に3日間ハマ
 emoji: "🧵"
 type: "tech"
 topics: ["HomeAssistant", "Matter", "Thread", "IPv6", "ESP32"]
-published: false
+published: true
 ---
 はいどーも、はおりんです！
 
