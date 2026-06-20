@@ -11,7 +11,7 @@ published: true
 
 # TL;DR
 トリガー: stateの変更(any)
-条件: イベントタイプ [multi_press_1, multi_press_2, multi_press_3, long_press, long_release]
+条件: 属性/イベントタイプ [multi_press_1, multi_press_2, multi_press_3, long_press, long_release]
 
 # Matterのボタンデバイスの「イベント」
 Home Assistantで「ボタンを長押ししたら何かをする」というオートメーションを組みたい時に、トリガーをどうすれば良いか、わからなかったんですよ。
