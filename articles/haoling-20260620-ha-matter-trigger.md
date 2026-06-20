@@ -93,3 +93,5 @@ conditions:
       - long_press
     attribute: event_type
 ```
+
+出典: https://forum.aqara.com/t/thread-devices-in-matter-home-assistant-event-as-trigger/122878/2
