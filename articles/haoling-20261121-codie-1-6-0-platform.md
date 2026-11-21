@@ -108,7 +108,7 @@ Codie に PC の Chrome を触らせる拡張機能。タブの一覧、ペー�
 
 もちろん安全にも配慮した。クリックや入力は既定で確認ウィンドウが出るし、購入や削除のような危ない操作は、確認をオフにしていても必ず確認が出る。
 
-MIT ライセンスで GitHub に公開していて、CodieHub Workshop にも投稿した。ユーザー投稿の 2 件目だ。
+MIT ライセンスで GitHub に公開していて、CodieHub Workshop にも投稿した。
 
 https://github.com/haoling/codie-browser-hands
 
