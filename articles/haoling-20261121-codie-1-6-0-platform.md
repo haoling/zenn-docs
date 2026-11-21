@@ -3,7 +3,7 @@ title: "Codie 1.6.0 で、おしゃべりキャラが「AI コンパニオンの
 emoji: "🪄"
 type: "tech"
 topics: ["Codie", "CODE27", "API", "WebSocket", "ChromeExtension"]
-published: false
+published: true
 ---
 はいどーも、はおりんです！
 
