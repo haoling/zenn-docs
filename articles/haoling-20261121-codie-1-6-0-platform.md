@@ -116,9 +116,11 @@ https://github.com/haoling/codie-browser-hands
 
 公式が公開している Game Buddy（ゲーム画面を見て Codie が実況してくれる Windows アプリ）のソースに、日本語 UI、日本語のコメント、日本語 Wikipedia の参照を足した。ゲームをしながら、Codie が日本語でツッコんでくれる
 
-### ③ k8s で連携マイクロサービス
+### ③ Chrome のサイドバーで Codie とチャット
 
-自宅の Kubernetes に、Codie と他のシステムを繋ぐマイクロサービスを作っている最中。これは動いたらまた記事にするね
+Chrome のサイドパネルから Codie とチャットできる拡張機能。会話の履歴を見たり、テキストを送ったり、今見ている画面を Codie に送ったり、新しい話題を始めたりできる。ブラウザを開いたまま、そのまま Codie と話せる
+
+https://github.com/haoling/codie-sidebar-chrome-extension
 
 ---
 
